@@ -6,6 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { EmailModule } from './email/email.module';
 import { PhishingSimulationModule } from './phishing-simulation/phishing-simulation.module';
 import { AuthModule } from './auth/auth.module';
+import { RabbitMQModule } from './rabbitmq/rabbitmq.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { AuthModule } from './auth/auth.module';
     EmailModule,
     PhishingSimulationModule,
     AuthModule,
+    RabbitMQModule,
   ],
   controllers: [AppController],
   providers: [AppService],
