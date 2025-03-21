@@ -5,6 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { EmailModule } from './email/email.module';
 import { PhishingSimulationModule } from './phishing-simulation/phishing-simulation.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { PhishingSimulationModule } from './phishing-simulation/phishing-simulat
     }),
     EmailModule,
     PhishingSimulationModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
