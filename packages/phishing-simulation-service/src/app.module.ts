@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { EmailModule } from './email/email.module';
+import { PhishingSimulationModule } from './phishing-simulation/phishing-simulation.module';
 
 @Module({
   imports: [
@@ -19,6 +21,8 @@ import { MongooseModule } from '@nestjs/mongoose';
       }),
       inject: [ConfigService],
     }),
+    EmailModule,
+    PhishingSimulationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
