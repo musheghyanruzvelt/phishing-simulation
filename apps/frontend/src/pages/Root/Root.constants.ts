@@ -1,0 +1,4 @@
+export const TAB = {
+  ATTEMPTS: "ATTEMPTS",
+  SIMULATION: "SIMULATION",
+};
